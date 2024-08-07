@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
-const Index = () => {
-  const [inputValue, setInputValue] = useState('');
-
+const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-gray-800 text-white p-4">
@@ -20,21 +18,13 @@ const Index = () => {
       </nav>
       
       <main className="flex-grow container mx-auto p-4">
-        <h2 className="text-xl font-semibold mb-4">Welcome to the Home Page</h2>
-        <p className="mb-4">This is a simple bare-bones application that you can modify and build upon.</p>
-        
-        <div className="space-y-4">
-          <Input
-            type="text"
-            placeholder="Enter some text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className="max-w-sm"
-          />
-          <Button onClick={() => alert(`You entered: ${inputValue}`)}>
-            Submit
-          </Button>
-        </div>
+        <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
+        <form className="space-y-4 max-w-md">
+          <Input type="text" placeholder="Your Name" />
+          <Input type="email" placeholder="Your Email" />
+          <Textarea placeholder="Your Message" />
+          <Button type="submit">Send Message</Button>
+        </form>
       </main>
       
       <footer className="bg-gray-800 text-white p-4 text-center">
@@ -44,4 +34,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Contact;

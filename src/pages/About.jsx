@@ -1,10 +1,4 @@
-import { useState } from 'react';
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-
-const Index = () => {
-  const [inputValue, setInputValue] = useState('');
-
+const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-gray-800 text-white p-4">
@@ -20,21 +14,8 @@ const Index = () => {
       </nav>
       
       <main className="flex-grow container mx-auto p-4">
-        <h2 className="text-xl font-semibold mb-4">Welcome to the Home Page</h2>
-        <p className="mb-4">This is a simple bare-bones application that you can modify and build upon.</p>
-        
-        <div className="space-y-4">
-          <Input
-            type="text"
-            placeholder="Enter some text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className="max-w-sm"
-          />
-          <Button onClick={() => alert(`You entered: ${inputValue}`)}>
-            Submit
-          </Button>
-        </div>
+        <h2 className="text-xl font-semibold mb-4">About Us</h2>
+        <p>This is the About page of our bare-bones application. You can add more content here.</p>
       </main>
       
       <footer className="bg-gray-800 text-white p-4 text-center">
@@ -44,4 +25,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default About;
